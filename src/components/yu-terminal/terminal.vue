@@ -30,7 +30,7 @@
     </div>
 
     <input type="file" accept="image/*" ref="fileInput" @change="handleFileUpload" style="display: none;">
-    <!-- <button @click="triggerFileUpload" class="upload-btn">上传背景</button> -->
+
   </div>
 </template>
 
@@ -48,9 +48,7 @@ const historyCommands = ref<string[]>([])
 const backgroundImage = ref('')
 const fileInput = ref<HTMLInputElement | null>(null)
 
-const triggerFileUpload = () => {
-  fileInput.value?.click()
-}
+
 const handleFileUpload = (event: Event) => {
   const target = event.target as HTMLInputElement
   const file = target.files?.[0]
